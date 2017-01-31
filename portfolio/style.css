@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.box{
+  background-color: #ccc;
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.box1{
+  background-color: #fcc;
+  width: 60%;
+  float:left;
+}
+.box2{
+  background-color: #cfc;
+  width: 40%;
+  float:left;
+}
+.box3{
+  background-color: #ccf;
+  clear:both;
+  width: 100%;
+}
+.box4{
+  background-color: #ffc;
+  width: 80%;
+}
+.box5{
+  background-color: #fcf;
+  width: 20%;
+}

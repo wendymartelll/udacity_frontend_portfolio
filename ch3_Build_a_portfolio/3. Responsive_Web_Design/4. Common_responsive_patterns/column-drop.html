@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Column Drop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            min-height: 150px;
+        }
+
+        .blue {
+            background-color: #2A457A;
+        }
+
+        .yellow {
+            background-color: rgb(250, 210, 52);
+        }
+
+        .green {
+            background-color: rgb(179, 210, 52);
+        }
+    </style>
+
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100%;
+        }
+        /*@media */
+        
+        @media screen and (min-width: 450px) {
+            .blue {
+                width: 25%;
+            }
+            .yellow {
+                width: 75%;
+            }
+        }
+
+        @media screen and (min-width: 550px) {
+            .blue {
+                width: 25%;
+            }
+            .yellow {
+                width: 50%;
+            }
+            .green {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box blue"></div>
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+body {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+
+@media screen and (min-width: 360px) {
+  .header__logo {
+    max-width: 100%;
+    height: 48px;
+    margin-right: 0.5em;
+    vertical-align: top;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+  .header__title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 150px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+
+  .hero article {
+    height: 60%;
+  }
+  .snippet__thumbnail{
+    display:none;
+  }
+  .scores__location {
+    display: none;
+  }
+  /*.snippet__title BASIC FOR everything h3{
+    overflow:hidden;
+
+    display: inline-block;
+    width: 280px;
+    text-overflow: ellipsis;
+    white-space:pre-wrap;
+  }*/
+
+   .multiline_block {
+    /*display: inline-block;*/
+    overflow: hidden;
+    width:100%;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align:left;
+    margin-right: -1em;
+    padding-right: 0.5em;
+
+    /*width: 280px;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+  }
+
+  /* create the ... */
+  .multiline_block:before {
+    /* points in the end */
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+  }
+
+  /* hide ... if we have text, which is less than or equal to max lines */
+.multiline_block:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+  }
+
+
+}
+
+@media screen and (min-width: 450px) {
+  .hero {
+    order: 0;
+    max-width: 100%;
+  }
+  .hero article {
+    height: 47%;
+  }
+  .weather {
+    width: 100%;
+  }
+  .snippet__thumbnail{
+    max-width:30%;
+    display:inline-block;
+    margin-bottom: 25px;
+  }
+  .snippet__title {
+    padding-bottom: 10px;
+  }
+  .multiline_block {
+   display: inline-block;
+   width:70%;
+ }
+
+
+@media screen and (min-width: 550px) {
+
+  .header__logo {
+    height: 70px;
+    margin-right: 0.5em;
+    vertical-align: top;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .header__title {
+    margin-left: 0;
+    margin-bottom: 0.6em ;
+    font-size: 3em;
+    vertical-align: bottom;
+  }
+  .header__menu {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+    background-color: inherit;
+    position: relative;
+    /* This trasform moves the drawer inside canvas. */
+    -webkit-transform: translate(0px, 0);
+    transform: translate(0px, 0);
+  }
+  .nav__item {
+    border-bottom: none;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    padding: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  .hero{
+    margin-top:0;
+    order:0;
+    width:40%;
+  }
+  .hero article {
+    height: 60%;
+  }
+  .weather{
+    margin-top: 0px;
+    order:1;
+    width:40%;
+  }
+  .weather__today__image {
+    text-align: right;
+  }
+  .weather__next__item {
+    width: 18%;
+  }
+  .weather__next__item span {
+    font-size:0.8em ;
+  }
+  .scores__location {
+    display:list-item;
+    list-style: none;
+  }
+  .snippet__thumbnail{
+    max-width: 30%;
+    display:inline-block;
+    margin-bottom: 25px;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  .hero{
+    order:0;
+    width:50%;
+  }
+  .hero article {
+    height: 55%;
+  }
+  .top-news{
+    max-height: 310px;
+    padding: 0.8em;
+    margin-top: 0px;
+    order:1;
+    width:50%;
+  }
+  .scores{
+    width: 60%;
+    order:2;
+  }
+  .scores__table{
+    font-size: 14px;
+  }
+  .weather{
+    display: inline-block;
+    margin-top: 0px;
+    order:3;
+    width:40%;
+  }
+
+  .weather__next__item {
+    width: 18.5%;
+  }
+  .weather__next__item span {
+    font-size:1em ;
+  }
+  .snippet__thumbnail{
+    width: 40%;
+  }
+  .multiline_block {
+   max-width: 60%;
+   text-align: left;
+   max-height: 4.6em;
+   line-height: 1.5em;
+ }
+ .multiline_block:before {
+   display: none;
+ }
+ .multiline_block:after {
+   display: none;
+ }
+footer{
+  text-align: center;
+}
+
+}
+@media screen and (min-width: 850px) {
+  main, .header__inner, .nav, .content {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
